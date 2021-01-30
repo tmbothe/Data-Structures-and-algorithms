@@ -7,15 +7,17 @@ You may assume the integer does not contain any leading zero, except the number 
 def plusOne(digits):
 
     n = len(digits)
-
+    
     for i in range(n):
         idx = n-1-i
+        # if digits is 9 replace all with 0
         if digits[idx]==9:
             digits[idx]=0
         else:
+            #if right number is not 9, add 1 and exit
             digits[idx]+=1
             return digits
-
+    #if all numbers are 9 add one at the beginning
     return [1] + digits
 
 
