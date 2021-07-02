@@ -2,7 +2,28 @@ import collections
 
 def invalidTransactions(transactions):
 
-    seen = collections.defaultdict(list)
+    
+
+
+
+
+if __name__ =='__main__':
+
+    transactions = ["alice,20,800,mtv","alice,50,100,beijing"]
+    print(invalidTransactions(transactions))
+    #Output: ["alice,20,800,mtv","alice,50,100,beijing"]
+
+    transactions = ["alice,20,800,mtv","alice,50,1200,mtv"]
+    print(invalidTransactions(transactions))
+    #Output: ["alice,50,1200,mtv"]
+
+    transactions = ["alice,20,800,mtv","bob,50,1200,mtv"]
+    print(invalidTransactions(transactions))
+    #Output: ["bob,50,1200,mtv"]
+
+    transactions = ["alice,20,800,mtv","alice,50,100,mtv","alice,51,100,frankfurt"]
+    #["alice,20,800,mtv","alice,50,100,mtv","alice,51,100,frankfurt"]
+    #['alice,20,800,mtv', 'alice,51,100,frankfurt', 'alice,50,100,mtv', 'alice,51,100,frseen = collections.defaultdict(list)
     invalid=set()
     
 
@@ -25,28 +46,7 @@ def invalidTransactions(transactions):
         seen[name].append((i,transaction))
         
     #print(invalid)
-    return [t for i,t in invalid]  
-
-
-
-
-if __name__ =='__main__':
-
-    transactions = ["alice,20,800,mtv","alice,50,100,beijing"]
-    print(invalidTransactions(transactions))
-    #Output: ["alice,20,800,mtv","alice,50,100,beijing"]
-
-    transactions = ["alice,20,800,mtv","alice,50,1200,mtv"]
-    print(invalidTransactions(transactions))
-    #Output: ["alice,50,1200,mtv"]
-
-    transactions = ["alice,20,800,mtv","bob,50,1200,mtv"]
-    print(invalidTransactions(transactions))
-    #Output: ["bob,50,1200,mtv"]
-
-    transactions = ["alice,20,800,mtv","alice,50,100,mtv","alice,51,100,frankfurt"]
-    #["alice,20,800,mtv","alice,50,100,mtv","alice,51,100,frankfurt"]
-    #['alice,20,800,mtv', 'alice,51,100,frankfurt', 'alice,50,100,mtv', 'alice,51,100,frankfurt']
+    return [t for i,t in invalid]  ankfurt']
     print(invalidTransactions(transactions))
 
     transactions=["alice,20,800,mtv","bob,50,1200,mtv","alice,20,800,mtv","alice,50,1200,mtv","alice,20,800,mtv","alice,50,100,beijing"]
