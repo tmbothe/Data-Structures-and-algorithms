@@ -22,6 +22,24 @@ def pair_sum(arr,k):
 print(pair_sum([1,3,2,2],4))
 
 
+
+
+
+def pairsum2(arr,target):
+    seen = set()
+
+    result=[]
+
+    for num in arr:
+        if num not in seen:
+            seen.add(num)
+        if target-num in seen:
+            result.append((target-num,num))
+    return result
+            
+
+
+
 """
 RUN THIS CELL TO TEST YOUR SOLUTION
 """
@@ -38,3 +56,18 @@ class TestPair(object):
 #Run tests
 t = TestPair()
 t.test(pair_sum)
+
+
+arr = [0, -1, 2, -3, 1]
+target = -2
+
+print(pairsum2(arr,target))
+
+arr = [1, -2, 1, 0, 5]
+target = 0
+
+print(pairsum2(arr,target))
+
+arr = [1, 4, 45, 6, 10, -8]
+target = 16
+print(pairsum2(arr,target))
