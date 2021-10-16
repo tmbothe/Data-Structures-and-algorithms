@@ -17,10 +17,11 @@ def topKFrequent(words,k):
             wordCount[word]=1
 
     word_count = [(-val,key) for key , val in wordCount.items()]
-
+    print(word_count)
     #2 - sort result by count and alphabetical order
 
     heapq.heapify(word_count)
+    print(word_count)
 
     
     #3 - return the result
