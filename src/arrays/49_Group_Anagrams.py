@@ -1,5 +1,7 @@
 from collections import defaultdict
 
+6249900
+
 
 def groupAnagrams(s):
 
